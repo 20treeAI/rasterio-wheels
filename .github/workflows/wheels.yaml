@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ "ubuntu-20.04", "macos-latest" ]
+        os: [ "ubuntu-20.04", "macos-10.15", "macos-latest" ]
         python: [ "3.7", "3.8", "3.9", "3.10" ]
         platform: [ "x86_64" ]
         macos-target: [ "10.10" ]
@@ -25,6 +25,8 @@ jobs:
         include:
           - os: "macos-latest"
             os-name: "osx"
+          - os: "macos-10.15"
+            os-name: "osx-10"
           - os: "ubuntu-20.04"
             os-name: "focal"
     env:
